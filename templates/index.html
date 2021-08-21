@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Cardiac disease - diagnosis</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+
+</head>
+
+<style>
+
+body{
+    background: url('static/image/anatomy.jpg'); 
+    background-size: 1550px 780px; 
+    background-position:top; 
+    background-repeat: no-repeat;
+   
+}
+
+ @media screen and (max-width: 460px){
+    body{
+        background-size: 500px 800px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 460px){
+    body{
+        background-size: 1400px 1500px;   
+    }
+}
+
+@media screen and (max-height: 900px) and (min-height: 800px){
+    body{
+        background-size: 600px 900px;   
+    }
+}
+
+@media screen and (max-height: 656px) and (min-height: 643px){
+    body{
+        background-size: 500px 950px;   
+    }
+}
+
+@media screen and (max-width: 1380px) and (min-width: 1360px){
+  body{
+        background-size: 1600px 1200px;   
+    }
+}
+
+
+</style>
+
+<body>
+    <div class="overlay">
+        <div class="login">
+        <h1>Cardiac Disease Prediction</h1>
+        <h3> Enter the following values for diagnosis</h3>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="number" name="age" placeholder="Patient Age" required="required" />
+            <select name="cp">
+                    <option value="0">Chest Pain Type</option>
+                    <option value="1">Typical Angina</option>
+                    <option value="2">Atypical Angina</option>
+                    <option value="3">Non-anginal Pain  </option>
+                    <option value="4"> Asymptomatic</option>
+            </select>
+            <input type="text" name="thal" placeholder="thal" required="required" />
+            <input type="text" name="thalach" placeholder="Max. Heart rate achieved (eg: 172)" required="required" />
+            <input type="text" name="oldpeak" placeholder="ST Depression induced by exercise" required="required" />
+            <input type="number" name="ca" placeholder="No. of major vessels (0-3) colored by flouroscopy" required="required" />
+            <br>
+            <button type="submit" class="btn">Diagnose</button>
+        </form>
+
+          {% if prediction_pos %}
+            <p style="color: rgba(240, 47, 47, 0.884);">{{ prediction_pos }}</p>
+          {% else %}
+            <p>{{ prediction_neg }}</p>
+          {% endif %}
+            
+
+        </div>
+    </div>
+    <div class="dev">
+        <span>follow @ <a href="https://github.com/vimal-11/cardiac_disease_prediction-ML"> github</a></span>    
+    </div>
+
+
+</body>
+</html>
