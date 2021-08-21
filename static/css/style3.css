@@ -1,0 +1,442 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+.btn{
+  background-color: #04eeff9c; 
+  border: none;
+  text-align: center;
+  border-radius: 4px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  letter-spacing: 1.2px;
+}
+.btn:hover { background-color: #00e1ffc4; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); }
+
+html { width: 100%; height:100%; }
+
+body {
+	width: 100%;
+	height:100%;
+	color: #fff;
+	font-size: 18px;
+	text-align:center;
+	letter-spacing:1.2px;
+	background-repeat: no-repeat;
+	background-position:top;
+	background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+body:after{
+    position:absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+.login {
+	position: absolute;
+	top: 6%;
+	left: 20%;
+	width:900px;
+	height:600px;
+    z-index: 10000;
+    background: rgba(8, 8, 8, 0.445);
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.678);
+    padding: 10px 10px;
+
+}
+
+.login h1 { 
+    color: rgb(0, 255, 242); 
+    text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+    letter-spacing:1.5px; 
+    text-align:center; 
+    font-family: "Poppins",Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 37px;
+    margin-top: 5px;
+    font-size: 49px;
+}
+
+.login h3{
+    font-weight: 400;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.login p{
+    font-size: 22px;
+    font-family:  "Monteserrat", "Noto Sans KR", Arial, Helvetica, sans-serif;
+    color: rgba(20, 224, 207, 0.918);
+    
+}
+
+input, select{
+	width: 50%;
+	margin-bottom: 10px;
+	background: rgba(0, 255, 221, 0.137);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+/*input:focus, select:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }*/
+
+select{
+    width: 52.2%;
+}
+select option{
+    color: #5f5358;
+}
+
+.dev{
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;   
+    z-index: 1000;
+}
+
+.dev span{
+    width: fit-content;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+    z-index: 1;
+    word-spacing: 2px;
+    font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+
+.dev span a{
+    text-decoration: none;
+    color: rgb(2, 177, 177);
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 460px){
+    body{
+        margin: 0px 0px;
+        width: 100%;
+        height: 750px;
+        position:relative;
+        
+    }
+
+    html{
+        position: relative;
+        width: 420px;
+        height: 820px;
+
+    }
+
+
+    .login {
+        position: absolute;
+        top: 5%;
+        left: 14.2%;
+        width:280px;
+        height:530px;
+        z-index: 10000;
+        background: rgba(8, 8, 8, 0.445);
+        box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.678);
+        padding: 10px 10px;    
+    }
+
+    .login h1 { 
+        letter-spacing:1px; 
+        font-weight: 200;
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+
+    .login h3{
+        font-weight: 100;
+        font-size: 13px;
+    }
+    
+    .login p{
+        font-size: 15px;
+    }
+
+    input, select{
+        width: 87%;
+        margin-bottom: 10px;
+        padding: 5.5px;
+        font-size: 10px;
+    }
+
+    select{
+        width: 91.5%;
+    }
+
+    .btn{
+        border-radius: 4px;
+        padding: 5px 15px;
+        margin-top: 10px;    
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .dev span{
+        margin-right: 20px;
+        margin-bottom: 25px;
+        word-spacing: 1.5px;
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 460px){
+    body{
+        margin: 0px 0px;
+        width: 100%;
+        height: 1500px;
+        position:relative;
+        
+    }
+
+    html{
+        position: relative;
+        width: 1100px;
+        height: 1500px;
+
+    }
+
+
+    .login {
+        position: absolute;
+        top: 10%;
+        left: 14.7%;
+        width: 65%;
+        height:70%;
+        z-index: 10000;
+        padding: 20px 20px;    
+    }
+
+    .login h1 { 
+        letter-spacing:1.5px; 
+        font-weight: 500;
+        margin-bottom: 50px;
+        font-size: 38px;
+    }
+
+    .login h3{
+        font-weight: 100;
+        font-size: 24px;
+    }
+    
+    .login p{
+        font-size: 25px;
+    }
+
+    input, select{
+        width: 67%;
+        margin-bottom: 20px;
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    select{
+        width: 70%;
+    }
+
+    .btn{
+        border-radius: 4px;
+        padding: 10px 25px;
+        margin-top: 30px;    
+        font-size: 17px;
+        letter-spacing: 1.2px;
+    }
+
+    .dev span{
+        margin-right: 30px;
+        margin-bottom: 90px;
+        word-spacing: 1.5px;
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-height: 900px) and (min-height: 800px){
+    body{
+        margin: 0px 0px;
+        width: 100%;
+        height: 850px;
+        position:relative;
+        
+    }
+
+    html{
+        position: relative;
+        width: 420px;
+        height: 1000px;
+
+    }
+
+
+    .login {
+        top: 10%;
+        left: 14%;    
+    }
+
+    .login h1 { 
+        letter-spacing:1.5px; 
+        font-weight: 500;
+        margin-bottom: 40px;
+        font-size: 25px;
+    }
+
+    .login p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 656px) and (min-height: 643px){
+    body{
+        margin: 0px 0px;
+        width: 100%;
+        height: 950px;
+        position:relative;    
+    }
+
+    html{
+        position: relative;
+        width: 400px;
+        height: 950px;
+    }
+
+    .login {
+        top: 10%;
+        left: 12.5%;    
+    }
+
+    .login h1 { 
+        letter-spacing:1.5px; 
+        font-weight: 500;
+        margin-bottom: 55px;
+        font-size: 25px;
+    }
+
+    .login p{
+        font-size: 17px;
+    }
+}
+   
+@media screen and (max-height: 820px) and (min-height: 810px){
+    body{
+        margin: 0px 0px;
+        width: 100%;
+        height: 870px;
+        position:relative;     
+    }
+
+    html{
+        position: relative;
+        width: 400px;
+        height: 900px;
+    }
+
+    .login {
+        top: 10%;
+        left: 12.5%;    
+    }
+
+    .login h1 { 
+        letter-spacing:1.5px; 
+        font-weight: 500;
+        margin-bottom: 55px;
+        font-size: 25px;
+    }
+
+    .login p{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-height: 420px) and (min-height: 270px){
+    body{
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 710px){
+    body{
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 1380px) and (min-width: 1360px){
+    body{
+        margin: 0px 0px;
+        width: 100%;
+        height: 1070px;
+        position:relative;
+        overflow: hidden;     
+    }
+    html{
+        position: relative;
+        width: 1368px;
+        height: 1090px;
+    }
+
+    .login {
+        top: 13%;
+        left: 16%;
+        width: 65%;
+        height:70%;
+        padding: 20px 20px;    
+    }
+    .login h1 { 
+        letter-spacing:1.5px; 
+        font-weight: 500;
+        margin-bottom: 55px;
+        font-size: 35px;
+    }
+
+    .login p{
+        font-size: 23px;
+    }
+    .login h3{
+        font-size: 22px;
+    }
+
+    .dev span{
+        margin-right: 30px;
+        margin-bottom: 90px;
+        word-spacing: 1.5px;
+        font-size: 14px;
+    }
+}
+
