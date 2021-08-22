@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler as sc
 
 df = pd.read_csv("heart_data.csv")
 #use required features
-cdf = df[['age','cp','thal','thalach','oldpeak','ca','target']]
+cdf = df[['age','cp','thal','thalach','oldpeak','ca', 'chol','target']]
 
 #Training Data and Predictor Variable
 # Use all data for training (tarin-test-split not used)
@@ -24,4 +24,4 @@ pickle.dump(regressor, open('model.pkl','wb'))
 
 #Loading model to compare the results
 model = pickle.load(open('model.pkl','rb'))
-print(model.predict(np.array([[20,0,2,160,1.2,0]])))
+print(model.predict(np.array([[20,0,2,160,1.2,0,250]])))
