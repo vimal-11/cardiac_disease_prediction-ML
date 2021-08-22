@@ -77,10 +77,16 @@ body{
                     <option value="3">Non-anginal Pain  </option>
                     <option value="4"> Asymptomatic</option>
             </select>
-            <input type="text" name="thal" placeholder="thal" required="required" />
+            <select name="thal">
+                    <option value="0">Thalassemia defect</option>
+                    <option value="1">Fixed defect</option>
+                    <option value="2">Reversible defect</option>
+                    <option value="3">Normal</option>
+            </select>
             <input type="text" name="thalach" placeholder="Max. Heart rate achieved (eg: 172)" required="required" />
             <input type="text" name="oldpeak" placeholder="ST Depression induced by exercise" required="required" />
             <input type="number" name="ca" placeholder="No. of major vessels (0-3) colored by flouroscopy" required="required" />
+            <input type="text" name="chol" placeholder="Serum Cholesterol in mg/dl" required="required" />
             <br>
             <button type="submit" class="btn">Diagnose</button>
         </form>
