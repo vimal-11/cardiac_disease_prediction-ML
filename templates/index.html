@@ -77,11 +77,11 @@ body{
         <form action="{{ url_for('predict')}}"method="post">
             <input type="number" name="age" placeholder="Patient Age" required="required" />
             <select name="cp">
-                    <option value="0">Chest Pain Type</option>
-                    <option value="1">Typical Angina</option>
-                    <option value="2">Atypical Angina</option>
-                    <option value="3">Non-anginal Pain  </option>
-                    <option value="4"> Asymptomatic</option>
+                    <option value="">Chest Pain Type</option>
+                    <option value="0">Typical Angina</option>
+                    <option value="1">Atypical Angina</option>
+                    <option value="2">Non-anginal Pain  </option>
+                    <option value="3"> Asymptomatic</option>
             </select>
             <select name="thal">
                     <option value="0">Thalassemia defect</option>
